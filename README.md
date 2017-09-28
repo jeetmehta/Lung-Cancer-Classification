@@ -1,13 +1,6 @@
 # Lung Cancer Classification using LBP and Chi Squared Distances
 ## Classifying cancerous lesions and nodules in the lung using histogramic distances
 
-Jeet Mehta
-Faculty of Engineering
-University of Waterloo (U.W)
-Waterloo, Ontario. Canada
-j4mehta@uwaterloo.ca
-
-
 ### Abstract
 Just in the US alone, lung cancer affects 225 000 people every year, and is a $12 billion cost on the health care industry. Globally, it remains the leading cause of cancer death for both men and women. Thus, early detection becomes vital in successful diagnosis, as well as prevention and survival. 
 
@@ -31,7 +24,7 @@ The objective of this investigation is to validate the capabilities and accuracy
 
 The study is organized in a chronological fashion. First, the choice of the appropriate algorithm and it’s implementation are discussed. This also includes detailed explanations on the pre-processing required to sucessfully analyze the data set. Then, an analysis of the performance of the method, as well as it’s related results are presented. Finally, the study concludes with additional changes and improvements to the existing implementation, as well as considerations on it’s applications and potential variations.
 
-### II.	Material and METHODS
+### II.	Material and Methods
 Having established the problem, as well as the objectives of this study, it was necessary to determine the procedure that the study was based on. This includes the sources of data (materials) necessary, as well as the chosen algorithm (method) of operation. Each of these components, as well as their related facets are discussed in the section below.
 
 #### A.	Materials: Sources of Data
