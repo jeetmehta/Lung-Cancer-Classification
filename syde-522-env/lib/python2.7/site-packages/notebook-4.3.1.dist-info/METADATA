@@ -1,0 +1,47 @@
+Metadata-Version: 2.0
+Name: notebook
+Version: 4.3.1
+Summary: A web-based notebook environment for interactive computing
+Home-page: http://jupyter.org
+Author: Jupyter Development Team
+Author-email: jupyter@googlegroups.com
+License: BSD
+Keywords: Interactive,Interpreter,Shell,Web
+Platform: Linux
+Platform: Mac OS X
+Platform: Windows
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: System Administrators
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Requires-Dist: ipykernel
+Requires-Dist: ipython-genutils
+Requires-Dist: jinja2
+Requires-Dist: jupyter-client
+Requires-Dist: jupyter-core
+Requires-Dist: nbconvert
+Requires-Dist: nbformat
+Requires-Dist: tornado (>=4)
+Requires-Dist: traitlets
+Requires-Dist: terminado (>=0.3.3); sys_platform != "win32"
+Provides-Extra: doc
+Requires-Dist: Sphinx (>=1.1); extra == 'doc'
+Provides-Extra: test
+Requires-Dist: nose; extra == 'test'
+Requires-Dist: requests; extra == 'test'
+Provides-Extra: test
+Requires-Dist: mock; python_version == "2.7" and extra == 'test'
+
+
+The Jupyter Notebook is a web application that allows you to create and
+share documents that contain live code, equations, visualizations, and
+explanatory text. The Notebook has support for multiple programming
+languages, sharing, and interactive widgets.
+
+Read `the documentation <https://jupyter-notebook.readthedocs.io>`_
+for more information.
+
+

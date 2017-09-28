@@ -1,0 +1,87 @@
+{% extends "page.html" %}
+
+
+{% block stylesheet %}
+{{super()}}
+<link rel="stylesheet" href="{{ static_url("auth/css/override.css") }}" type="text/css" />
+{% endblock %}
+
+{% block login_widget %}
+{% endblock %}
+
+{% block site %}
+
+<div id="ipython-main-app" class="container">
+
+    {% if login_available %}
+    {# login_available means password-login is allowed. Show the form. #}
+    <div class="row">
+    <div class="navbar col-sm-8">
+      <div class="navbar-inner">
+        <div class="container">
+          <div class="center-nav">
+            <p class="navbar-text nav">Password{% if token_available %} or token{% endif %}:</p>
+            <form action="{{base_url}}login?next={{next}}" method="post" class="navbar-form pull-left">
+              {{ xsrf_form_html() | safe }}
+              <input type="password" name="password" id="password_input" class="form-control">
+              <button type="submit" id="login_submit">Log in</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+    {% else %}
+    <p>No login available, you shouldn't be seeing this page.</p>
+    {% endif %}
+    {% if message %}
+      <div class="row">
+      {% for key in message %}
+        <div class="message {{key}}">
+           {{message[key]}}
+        </div>
+      {% endfor %}
+      </div>
+    {% endif %}
+    {% if token_available %}
+    {% block token_message %}
+    <div class="col-sm-6 col-sm-offset-3 text-left">
+      <p class="warning">
+        Token authentication is enabled.
+
+        You need to open the notebook server with its first-time login token in the URL,
+        or enable a password in order to gain access.
+        The command:
+      </p>
+      <pre>jupyter notebook list</pre>
+      <p>
+        will show you the URLs of running servers with their tokens,
+        which you can copy and paste into your browser. For example:
+      </p>
+      <pre>Currently running servers:
+http://localhost:8888/?token=c8de56fa... :: /Users/you/notebooks
+</pre>
+      <p>
+        Or you can paste just the token value into the password field on this page.
+      </p>
+      <p>
+        Cookies are required for authenticated access to notebooks.
+      </p>
+    </div>
+    {% endblock token_message %}
+    {% endif %}
+</div>
+
+{% endblock %}
+
+
+{% block script %}
+{{super()}}
+
+<script type="text/javascript">
+  require(["auth/js/main"], function (auth) {
+    auth.login_main();
+  });
+</script>
+
+{% endblock %}
