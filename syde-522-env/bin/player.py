@@ -20,7 +20,7 @@ import sys
 
 class UI(Label):
 
-    def __init__(self, master, im):
+    def __init__(self, main, im):
         if isinstance(im, list):
             # list of images
             self.im = im[1:]
@@ -34,7 +34,7 @@ class UI(Label):
         else:
             self.image = ImageTk.PhotoImage(im)
 
-        Label.__init__(self, master, image=self.image, bg="black", bd=0)
+        Label.__init__(self, main, image=self.image, bg="black", bd=0)
 
         self.update()
 

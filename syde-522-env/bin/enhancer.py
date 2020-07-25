@@ -20,8 +20,8 @@ import sys
 
 
 class Enhance(Frame):
-    def __init__(self, master, image, name, enhancer, lo, hi):
-        Frame.__init__(self, master)
+    def __init__(self, main, image, name, enhancer, lo, hi):
+        Frame.__init__(self, main)
 
         # set up the image
         self.tkim = ImageTk.PhotoImage(image.mode, image.size)
