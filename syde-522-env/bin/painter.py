@@ -22,8 +22,8 @@ import sys
 
 
 class PaintCanvas(Canvas):
-    def __init__(self, master, image):
-        Canvas.__init__(self, master, width=image.size[0], height=image.size[1])
+    def __init__(self, main, image):
+        Canvas.__init__(self, main, width=image.size[0], height=image.size[1])
 
         # fill the canvas
         self.tile = {}

@@ -20,8 +20,8 @@ import sys
 
 
 class UI(Frame):
-    def __init__(self, master, im, value=128):
-        Frame.__init__(self, master)
+    def __init__(self, main, im, value=128):
+        Frame.__init__(self, main)
 
         self.image = im
         self.value = value

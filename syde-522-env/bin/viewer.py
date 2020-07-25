@@ -19,17 +19,17 @@ from PIL import Image, ImageTk
 
 class UI(Label):
 
-    def __init__(self, master, im):
+    def __init__(self, main, im):
 
         if im.mode == "1":
             # bitmap image
             self.image = ImageTk.BitmapImage(im, foreground="white")
-            Label.__init__(self, master, image=self.image, bg="black", bd=0)
+            Label.__init__(self, main, image=self.image, bg="black", bd=0)
 
         else:
             # photo image
             self.image = ImageTk.PhotoImage(im)
-            Label.__init__(self, master, image=self.image, bd=0)
+            Label.__init__(self, main, image=self.image, bd=0)
 
 #
 # script interface
